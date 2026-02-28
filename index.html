@@ -58,25 +58,33 @@
         <fieldset
           class="fieldset bg-white border-base-300 rounded-box w-[402px] p-8 gap-4"
         >
-          <label class="label font-medium text-[#080808]">Mobile Number</label>
+          <label class="label text-[16px] font-medium text-[#080808]"
+            >Mobile Number</label
+          >
           <input
+            id="mobile_number"
             maxlength="11"
             minlength="11"
             type="email"
-            class="input rounded-full p-5 bg-[#F4F5F7] border-none"
+            class="input text-[16px] rounded-full p-5 bg-[#F4F5F7] border-none"
             placeholder="Enter your number"
           />
 
-          <label class="label font-medium text-[#080808]">4 Digit Pin</label>
+          <label class="label text-[16px] font-medium text-[#080808]"
+            >4 Digit Pin</label
+          >
           <input
+            id="pin"
             maxlength="4"
             minlength="4"
             type="password"
-            class="input rounded-full p-5 bg-[#F4F5F7] border-none"
+            class="input text-[16px] rounded-full p-5 bg-[#F4F5F7] border-none"
             placeholder="Enter 4 Digit Pin"
           />
 
-          <button class="btn btn-primary rounded-full">Login</button>
+          <button id="login_btn" class="btn btn-primary rounded-full">
+            Login
+          </button>
         </fieldset>
       </div>
     </div>
