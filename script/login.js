@@ -7,6 +7,7 @@ document.getElementById("login_btn").addEventListener("click", function () {
 
     if (idNumber == "01876566181" && pinNumber == "6181") {
         alert("login Success")
+        window.location.assign("/home.html")
     } else {
         alert("Wrong Input")
     }
