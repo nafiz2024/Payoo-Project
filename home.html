@@ -154,8 +154,76 @@
     </section>
     <!-- Home Page Section End-->
 
+    <!-- Add Money Section Start-->
+    <section id="add_money">
+      <div class="px-6 pb-10">
+        <div class="">
+          <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
+            Add Money
+          </h1>
+        </div>
+        <div class="">
+          <fieldset
+            class="fieldset bg-white border-base-300 rounded-3xl w-[402px] p-6 gap-4"
+          >
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Select A Bank</label
+            >
+            <select id="add_money_bank" class="select text-[16px] font-light text-[#080808]/50 rounded-full px-5 bg-[#F4F5F7] border-none w-full">
+              <option disabled selected>Select A Bank</option>
+              <option>DBBL</option>
+              <option>UCB</option>
+              <option>MTB</option>
+            </select>
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Bank Account Number</label
+            >
+            <input
+              id="bank_account_number"
+              maxlength="11"
+              minlength="11"
+              type="number"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter 11 digit account number"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Amount to Add</label
+            >
+            <input
+              id="add_money_amount"
+              type="password"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Add Amount to withdraw"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Pin Number</label
+            >
+            <input
+              id="add-money_pin"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              id="add_money_btn"
+              class="btn btn-primary rounded-full text-xl text-white font-semibold"
+            >
+              Withdraw Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <!-- Add Money Section End-->
+
     <!-- Cashout Section Start-->
-    <section>
+    <section id="cashout" class="hidden">
       <div class="px-6 pb-10">
         <div class="">
           <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
@@ -183,8 +251,6 @@
             >
             <input
               id="cashout_amount"
-              maxlength="11"
-              minlength="11"
               type="number"
               class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
               placeholder="Enter amount to withdraw"
@@ -195,8 +261,8 @@
             >
             <input
               id="cashout_pin"
-              maxlength="11"
-              minlength="11"
+              maxlength="4"
+              minlength="4"
               type="password"
               class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
               placeholder="Enter 4 digit pin number"
@@ -215,6 +281,7 @@
     <!-- Cashout Section End-->
 
     <script src="/script/machine.js"></script>
+    <script src="/script/addMoney.js"></script>
     <script src="/script/cashout.js"></script>
   </body>
 </html>
