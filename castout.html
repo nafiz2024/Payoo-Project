@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payoo | Login</title>
+    <title>Payoo | Cash Out</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
 
     <!-- daisyui CSS -->
@@ -109,15 +109,15 @@
 
       <!-- Card Section Start-->
       <section>
-        <div class="p-6 grid grid-cols-3 gap-4">
+        <div class="p-6 grid grid-cols-3 gap-4 mb-4">
           <button
-            class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2] focus:bg-[#0874F2]/5 focus:border focus:border-[#0874F2]"
+            class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2]"
           >
             <img src="/assets/opt-1.png" alt="" />
             <p>Add Money</p>
           </button>
           <button
-            class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2]"
+            class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2] focus:bg-[#0874F2]/5 focus:border focus:border-[#0874F2]"
           >
             <img src="/assets/opt-2.png" alt="" />
             <p>Cashout</p>
@@ -151,5 +151,68 @@
       <!-- Card Section End-->
     </section>
     <!-- Home Page Section End-->
+
+    <!-- Cashout Section Start-->
+    <section>
+      <div class="px-6 pb-10">
+        <div class="">
+          <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
+            Cash Out
+          </h1>
+        </div>
+        <div class="">
+          <fieldset
+            class="fieldset bg-white border-base-300 rounded-3xl w-[402px] p-6 gap-4"
+          >
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Agent Number</label
+            >
+            <input
+              id="agent_number"
+              maxlength="11"
+              minlength="11"
+              type="number"
+              value=""
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter 11 digit number"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Amount</label
+            >
+            <input
+              id="cashout_amount"
+              maxlength="11"
+              minlength="11"
+              type="number"
+              value=""
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter amount to withdraw"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Pin Number</label
+            >
+            <input
+              id="cashout_pin"
+              maxlength="11"
+              minlength="11"
+              type="password"
+              value=""
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              id="cashout_btn"
+              class="btn btn-primary rounded-full text-xl text-white font-semibold"
+            >
+              Withdraw Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <!-- Cashout Section End-->
   </body>
 </html>
