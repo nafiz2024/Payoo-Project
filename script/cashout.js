@@ -7,19 +7,18 @@ document.getElementById("cashout_btn").addEventListener("click", function () {
 
     const cashoutAmount = getValueFromInput("cashout_amount");
 
-    const currentBalanceInput = document.getElementById("balance");
-    const currentBalance = currentBalanceInput.innerText;
+    const currentBalance = getBalance();
 
-    const newBalance = Number(currentBalance) - Number(cashoutAmount);
-    if(newBalance < 0){
+    const newBalance = currentBalance - Number(cashoutAmount);
+    if (newBalance < 0) {
         alert("This Amount is Not Available in Your Account");
         return;
     }
 
     const pinNumber = getValueFromInput("cashout_pin")
-    if(pinNumber == 6181){
+    if (pinNumber == 6181) {
         alert("CashOut Successfull");
-        currentBalanceInput.innerText = newBalance;
+        setBalance(newBalance);
         return;
     } else {
         alert("Your Pin is Invalid")
