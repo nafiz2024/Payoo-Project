@@ -113,12 +113,13 @@
       <section>
         <div class="p-6 grid grid-cols-3 gap-4 mb-4">
           <button
+            onclick="showOnly('add_money')"
             class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2]"
           >
             <img src="/assets/opt-1.png" alt="" />
             <p>Add Money</p>
           </button>
-          <button
+          <button onclick="showOnly('cashout')"
             class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2]"
           >
             <img src="/assets/opt-2.png" alt="" />
@@ -155,7 +156,7 @@
     <!-- Home Page Section End-->
 
     <!-- Add Money Section Start-->
-    <section id="add_money">
+    <section id="add_money" class="">
       <div class="px-6 pb-10">
         <div class="">
           <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
@@ -226,7 +227,7 @@
     <!-- Add Money Section End-->
 
     <!-- Cashout Section Start-->
-    <section id="cashout" class="hidden">
+    <section id="cashout" class="">
       <div class="px-6 pb-10">
         <div class="">
           <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
