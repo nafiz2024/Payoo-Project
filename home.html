@@ -289,7 +289,7 @@
     <!-- Cashout Section End-->
 
     <!-- Transfer Money Section Start-->
-    <section id="transfer_money" class="">
+    <section id="transfer_money" class="hidden">
       <div class="px-6 pb-10">
         <div class="">
           <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
@@ -346,6 +346,42 @@
     </section>
     <!-- Transfer Money Section End-->
 
+    <!-- Bonus Section Start-->
+    <section id="bonus" class="">
+      <div class="px-6 pb-10">
+        <div class="">
+          <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
+            Get Bonus
+          </h1>
+        </div>
+        <div class="">
+          <fieldset
+            class="fieldset bg-white border-base-300 rounded-3xl w-[402px] p-6 gap-4"
+          >
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Enter Bonus Coupon</label
+            >
+            <input
+              id="bonus_coupon"
+              maxlength="4"
+              minlength="4"
+              type="text"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter your coupon"
+            />
+
+            <button
+              id="bonus_btn"
+              class="btn btn-primary rounded-full text-xl text-white font-semibold"
+            >
+              Get Bonus
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <!-- Bonus Section End-->
+
     <!-- Transactions Section Start-->
     <section id="transactions_history">
       <div class="p-6 mx-auto">
@@ -358,6 +394,7 @@
     </section>
     <!-- Transactions Section End-->
 
+    <script src="/script/getBonus.js"></script>
     <script src="/script/transferMoney.js"></script>
     <script src="/script/machine.js"></script>
     <script src="/script/addMoney.js"></script>
