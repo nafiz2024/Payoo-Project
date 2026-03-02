@@ -139,7 +139,8 @@
             <img src="/assets/opt-4.png" alt="" />
             <p>Transfer Money</p>
           </button>
-          <button onclick="showOnly(bonus)"
+          <button
+            onclick="showOnly('bonus')"
             class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2]"
           >
             <img src="/assets/opt-5.png" alt="" />
@@ -288,6 +289,77 @@
     </section>
     <!-- Cashout Section End-->
 
+    <!-- Pay Bill Section Start-->
+    <section id="pay_bill" class="">
+      <div class="px-6 pb-10">
+        <div class="">
+          <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
+            Pay Bill
+          </h1>
+        </div>
+        <div class="">
+          <fieldset
+            class="fieldset bg-white border-base-300 rounded-3xl w-[402px] p-6 gap-4"
+          >
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Select To Pay</label
+            >
+            <select
+              id="select_pay_biller"
+              class="select text-[16px] font-light text-[#080808]/50 rounded-full px-5 bg-[#F4F5F7] border-none w-full"
+            >
+              <option disabled selected>Select Biller</option>
+              <option>WASA</option>
+              <option>DESCO</option>
+              <option>Amber IT</option>
+            </select>
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Biller Account Number</label
+            >
+            <input
+              id="biller_account_number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter account number"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Amount to Pay</label
+            >
+            <input
+              id="pay_bill_amount"
+              type="number"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Add Amount to pay"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Pin Number</label
+            >
+            <input
+              id="pay_bill_pin"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              id="add_bill_btn"
+              class="btn btn-primary rounded-full text-xl text-white font-semibold"
+            >
+              Pay Now
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <!-- Pay Bill Section End-->
+
     <!-- Transfer Money Section Start-->
     <section id="transfer_money" class="hidden">
       <div class="px-6 pb-10">
@@ -394,6 +466,7 @@
     </section>
     <!-- Transactions Section End-->
 
+    <script src="/script/payBill.js"></script>
     <script src="/script/getBonus.js"></script>
     <script src="/script/transferMoney.js"></script>
     <script src="/script/machine.js"></script>
