@@ -25,10 +25,12 @@ function showOnly(id) {
 
     const addMoney = document.getElementById("add_money");
     const cashOut = document.getElementById("cashout");
+    const transferMoney = document.getElementById("transfer_money");
 
     // Hide All Section ID
     addMoney.classList.add("hidden");
     cashOut.classList.add("hidden")
+    transferMoney.classList.add("hidden")
 
     // Show Button Click ID
     const selected = document.getElementById(id);

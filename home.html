@@ -133,6 +133,7 @@
             <p>Pay Bill</p>
           </button>
           <button
+            onclick="showOnly('transfer_money')"
             class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2]"
           >
             <img src="/assets/opt-4.png" alt="" />
@@ -144,6 +145,7 @@
             <img src="/assets/opt-5.png" alt="" />
             <p>Get Bonus</p>
           </button>
+
           <button
             onclick="showOnly('transactions_history')"
             class="btn flex-col h-full py-5 px-[26px] gap-2 bg-white rounded-xl hover:bg-[#0874F2]/5 hover:border hover:border-[#0874F2]"
@@ -286,6 +288,64 @@
     </section>
     <!-- Cashout Section End-->
 
+    <!-- Transfer Money Section Start-->
+    <section id="transfer_money" class="">
+      <div class="px-6 pb-10">
+        <div class="">
+          <h1 class="text-[18px] font-semibold text-[#080808] pb-4">
+            Transfer Money
+          </h1>
+        </div>
+        <div class="">
+          <fieldset
+            class="fieldset bg-white border-base-300 rounded-3xl w-[402px] p-6 gap-4"
+          >
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >User Account Number</label
+            >
+            <input
+              id="user_account_number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter 11 digit number"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Amount</label
+            >
+            <input
+              id="transfer_amount"
+              type="number"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter amount to transfer"
+            />
+
+            <label class="label text-[16px] font-medium text-[#080808]/70"
+              >Pin Number</label
+            >
+            <input
+              id="transfer_pin"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input text-[16px] font-light rounded-full py-4 px-5 bg-[#F4F5F7] border-none w-full"
+              placeholder="Enter 4 digit pin number"
+            />
+
+            <button
+              id="transfer_btn"
+              class="btn btn-primary rounded-full text-xl text-white font-semibold"
+            >
+              Send Now
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <!-- Transfer Money Section End-->
+
     <!-- Transactions Section Start-->
     <section id="transactions_history">
       <div class="p-6 mx-auto">
@@ -298,6 +358,7 @@
     </section>
     <!-- Transactions Section End-->
 
+    <script src="/script/transferMoney.js"></script>
     <script src="/script/machine.js"></script>
     <script src="/script/addMoney.js"></script>
     <script src="/script/cashout.js"></script>

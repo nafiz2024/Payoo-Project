@@ -1,24 +1,20 @@
-document.getElementById("cashout_btn").addEventListener("click", function () {
-    const agentNumber = getValueFromInput("agent_number");
-    if (agentNumber.length != 11) {
-        alert("Agent Number in Invalid");
-        return;
-    }
+document.getElementById("transfer_btn").addEventListener("click", function () {
+    const userAccountNumber = getValueFromInput("user_account_number");
+    if (userAccountNumber.length != 11) {
+        alert("User Account Number is Invalid");
+        return
+    };
 
-    const cashoutAmount = getValueFromInput("cashout_amount");
+    const transferAmount = getValueFromInput("transfer_amount");
 
     const currentBalance = getBalance();
 
-    const newBalance = currentBalance - Number(cashoutAmount);
-    if (newBalance < 0) {
-        alert("This Amount is Not Available in Your Account");
-        return;
-    }
+    const newBalance = currentBalance - Number(transferAmount);
 
-    const pinNumber = getValueFromInput("cashout_pin")
-    if (pinNumber == 6181) {
-        alert(`Cashout Success ${cashoutAmount} Taka in ${agentNumber} at ${new Date()}`);
-        
+    const pin = getValueFromInput("transfer_pin");
+    if (pin == 6181) {
+        alert(`Transfer Money Success ${transferAmount} Taka in ${userAccountNumber} at ${new Date()}`);
+
         setBalance(newBalance)
 
         const history = document.getElementById("history_container");
@@ -33,7 +29,7 @@ document.getElementById("cashout_btn").addEventListener("click", function () {
                 </div>
                 <div class="flex flex-col gap-1.5">
                   <h1 class="text-[16px] text-[#080808]/70 font-semibold">
-                    Cashout Success ${cashoutAmount} Taka 
+                    Transfer Money Success ${transferAmount} Taka 
                   </h1>
                   <p class="text-[12px] text-[#080808]/70">
                          ${new Date().toLocaleString('en-GB', {
@@ -63,4 +59,3 @@ document.getElementById("cashout_btn").addEventListener("click", function () {
         return;
     }
 })
-
