@@ -26,13 +26,15 @@ function showOnly(id) {
     const addMoney = document.getElementById("add_money");
     const cashOut = document.getElementById("cashout");
     const transferMoney = document.getElementById("transfer_money");
-    const getBonus = document.getElementById("bonus")
+    const getBonus = document.getElementById("bonus");
+    const payBill = document.getElementById("pay_bill");
 
     // Hide All Section ID
     addMoney.classList.add("hidden");
-    cashOut.classList.add("hidden")
-    transferMoney.classList.add("hidden")
-    getBonus.classList.add("hidden")
+    cashOut.classList.add("hidden");
+    transferMoney.classList.add("hidden");
+    getBonus.classList.add("hidden");
+    payBill.classList.add("hidden");
 
     // Show Button Click ID
     const selected = document.getElementById(id);

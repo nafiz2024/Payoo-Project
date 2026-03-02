@@ -30,7 +30,7 @@ document.getElementById("add_bill_btn").addEventListener("click", function () {
             <div class="flex items-center justify-between">
               <div class="flex gap-2">
                 <div class="p-3 bg-[#080808]/5 rounded-full w-12">
-                  <img src="/assets/opt-1.png" alt="" />
+                  <img src="/assets/opt-5.png" alt="" />
                 </div>
                 <div class="flex flex-col gap-1.5">
                   <h1 class="text-[16px] text-[#080808]/70 font-semibold">
