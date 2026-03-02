@@ -19,7 +19,7 @@ document.getElementById("add_money_btn").addEventListener("click", function () {
 
     const pin = getValueFromInput("add_money_pin");
     if (pin == 6181) {
-        alert("Add Money Successfull");
+        alert(`Add Money ${addMoneyAmount} Sucess from ${bankAccount} at ${new Date()}`);
         setBalance(newBalance)
         return;
     } else {
